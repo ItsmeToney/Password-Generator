@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <script defer src="script.js"></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="password__container">
+        <div class="generated__password"></div>
+        <img class="copy__img" src="./copy-svgrepo-com.svg" alt="copy" />
+      </div>
+      <div class="conditions__container">
+        <div class="count__container">
+          <div class="ch__label">Character length</div>
+          <div class="ch__count">0</div>
+        </div>
+        <input
+          class="count__range"
+          type="range"
+          min="0"
+          max="25"
+          value="0"
+          oninput="this.style.setProperty('--val', this.value*4+ '%')"
+        />
+        <div class="conditions">
+          <input type="checkbox" id="includeUpper" class="checkbox" />
+          <label for="includeUpper">INCLUDE UPPERCASE</label
+          ><input type="checkbox" id="includeLower" class="checkbox" />
+          <label for="includeLower">include lowercase</label
+          ><input type="checkbox" id="includeNumber" class="checkbox" />
+          <label for="includeNumber"> 0,1,2..</label
+          ><input type="checkbox" id="includeSpecial" class="checkbox" />
+          <label for="includeSpecial">!,@,#,$...</label>
+        </div>
+      </div>
+      <button class="generate__btn">generate password</button>
+    </main>
+  </body>
+</html>
