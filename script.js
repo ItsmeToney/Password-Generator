@@ -72,6 +72,5 @@ range.addEventListener("input", function () {
 
 copyBtn.addEventListener("click", function () {
   const textCopied = passwordGenerated.textContent;
-  console.log(textCopied);
   navigator.clipboard.writeText(textCopied);
 });
